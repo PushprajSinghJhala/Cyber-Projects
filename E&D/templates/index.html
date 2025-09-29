@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SecureText Encryptor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+</script>
+</head>
+<body>
+  <header>
+    <h2>SecureText Encryptor</h2>
+   <nav>
+  <a href="{{ url_for('index') }}">Home</a>
+  <a href="{{ url_for('about') }}">About</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
+</nav>
+
+  </header>
+
+  <main>
+    <section class="encryptor-box">
+      <div class="left">
+        <h3>Enter Your Text Here:</h3>
+        <textarea id="text" placeholder="Type or paste your message..."></textarea>
+
+        <h3>Choose Method:</h3>
+        <select id="method">
+          <option value="aes">AES</option>
+          <option value="fernet">Fernet</option>
+          <option value="base64">Base64</option>
+        </select>
+
+        <!-- AES Bit Size Selection (show only if AES selected, optional JS for dynamic show/hide) -->
+        <label for="aes_bits">AES Bit Size:</label>
+        <select id="aes_bits" name="aes_bits">
+            <option value="128"selected>128 bit</option>
+            <option value="192">192 bit</option>
+            <option value="256">256 bit</option>
+        </select>
+
+        <div class="buttons">
+          <button onclick="processText('encrypt')" class="encrypt">Encrypt</button>
+          <button onclick="processText('decrypt')" class="decrypt">Decrypt</button>
+          <button onclick="clearAll()" class="clear">Clear All</button>
+        </div>
+      </div>
+
+      <div class="right">
+        <h3>Your Result</h3>
+        <textarea id="result" readonly></textarea>
+        <button onclick="copyResult()" class="copy-btn">📋 Copy to Clipboard</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SecureText Encryptor | Privacy Policy | Terms of Service | Pushpraj Singh Jhala</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
