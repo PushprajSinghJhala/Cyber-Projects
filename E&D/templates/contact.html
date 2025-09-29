@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact - E&D Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('contact') }}" class="active">Contact</a>
+    </nav>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Have questions, suggestions, or feedback? Reach out to us!</p>
+        <div class="contact-info">
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:support@example.com">E&Dsupport@gmail.com</a></li>
+                <li><strong>Phone:</strong> +91-9876543210</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/PushprajSinghJhala" target="_blank">PushprajSinghJhala</a></li>
+            </ul>
+        </div>
+        <div class="contact-footer">
+            <a href="{{ url_for('index') }}">⬅ Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About - E&D Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}" class="active">About</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+    <div class="container">
+        <h1>About E&D Tool</h1>
+        <p>
+            <strong>E&D Tool</strong> is a simple web application for encrypting and decrypting text using modern cryptography algorithms like Fernet and AES.<br>
+            This project is designed for educational and demonstration purposes, making it easy to understand how encryption and decryption work.
+        </p>
+        <ul>
+            <li> Secure encryption methods</li>
+            <li> Fast and easy to use</li>
+            <li> Open source and customizable</li>
+        </ul>
+        <div class="about-footer">
+            <p>by <a href="https://github.com/PushprajSinghJhala" target="_blank">Pushpraj Singh Jhala</a></p>
+        </div>
+    </div>
+</body>
+</html>
